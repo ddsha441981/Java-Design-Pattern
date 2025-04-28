@@ -55,12 +55,10 @@ A **FileProcessorFactory** is implemented for:
 
 ### Endpoints
 
-- **POST /api/files/process**
+- **POST api/v1/file/operation?file**
   - Handles file uploads and processing.
   - Accepts `multipart/form-data` with the file to be processed.
 
-- **GET /api/files/supported-types**
-  - Lists all supported file formats for processing.
 
 ### Spring Boot Configuration
 
@@ -89,12 +87,14 @@ The project is configured with Spring Boot for handling multipart file uploads:
 
 ---
 
-## Future Enhancements
+## 📈Future Enhancements
 
 - **Asynchronous Processing**: Implement async processing for large files.
 - **Virus Scanning**: Integrate file scanning for viruses before processing.
 - **Progress Tracking**: Provide feedback on processing progress via WebSocket or API endpoints.
-
+- **Add asynchronous** file processing support (Spring Events or ExecutorService).
+- **Add** file virus scanning integration (optional for high-security environments).
+- **Expose** processing progress via WebSocket or REST API.
 ---
 
 ## Installation & Setup
@@ -102,4 +102,24 @@ The project is configured with Spring Boot for handling multipart file uploads:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/file-processing-system.git
+   git clone https://github.com/your-repo/template-desgin-pattern.git
+   ```
+2. Navigate to the project directory:
+    ```bash
+    cd template-desgin-pattern
+    ```
+3. Install dependencies and build the project:
+    ```bash
+    ./mvnw clean install
+    ```
+4. Run the application:
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+5. Access the API:
+    - **POST** http://localhost:8181/api/v1/file/operation?file to upload and process files.
+
+    - **GET** http://localhost:8181/api/v1/file/operation/supported-types to see supported file types.
+✅ Status
+
+    This implementation is complete, tested, and production-ready for extensible file handling.

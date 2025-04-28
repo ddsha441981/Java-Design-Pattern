@@ -7,9 +7,10 @@ import java.io.File;
 
 @Service
 public class XMLFileProcessor extends FileProcessorTemplate {
+    //TODO: XML Implementations
     @Override
-    protected String processContent(String content) {
-        return "";
+    protected void processContent(String content) {
+
     }
 
     @Override

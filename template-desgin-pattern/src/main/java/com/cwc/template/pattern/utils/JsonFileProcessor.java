@@ -7,9 +7,10 @@ import java.io.File;
 
 @Service
 public class JsonFileProcessor extends FileProcessorTemplate {
+    //TODO: JSON Implementations
     @Override
-    protected String processContent(String content) {
-        return "";
+    protected void processContent(String content) {
+
     }
 
     @Override

@@ -1,13 +1,11 @@
 package com.cwc.template.pattern.utils;
 
 import com.cwc.template.pattern.template.FileProcessorTemplate;
-import org.springframework.stereotype.Service;
 
 import java.io.File;
 
-@Service
-public class CSVFileProcessor extends FileProcessorTemplate {
-    //TODO: CSV Implementations
+public class PdfFileProcessor extends FileProcessorTemplate {
+    //TODO: PDF Implementations
     @Override
     protected void processContent(String content) {
 
